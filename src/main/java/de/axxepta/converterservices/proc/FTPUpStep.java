@@ -146,7 +146,7 @@ class FTPUpStep extends Step {
                     FTPUtils.upload(secure, user, pwd, server, port, path, base, file, protocol);
                 }
                 uploadedFiles.add(file);
-            } catch (IOException ex) {
+            } catch (Exception ex) {
                 pipe.log(String.format("Error during FTP file transfer of file %s: %s", file, ex.getMessage()));
             }
         }

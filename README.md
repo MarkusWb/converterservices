@@ -23,7 +23,7 @@ The list of supported steps contains
 
 Error reporting can be configured (send the reports to a remote server logging instance or by email).
 
-Check out the [Wiki](https://github.com/MarkusWb/converterservices/wiki) and the [JavaDoc](https://MarkusWb.github.io/converterservices/)
+Check out the [Wiki](https://github.com/MarkusWb/converterservices/wiki) and the [JavaDoc](https://markuswb.github.io/converterservices/index.html)
 to find out more about *converterservices*.
 
 

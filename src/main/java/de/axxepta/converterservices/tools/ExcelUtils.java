@@ -466,7 +466,7 @@ public class ExcelUtils {
             Row row1 = sheet.getRow(firstRow);
             for (int colNumber = firstColumn; colNumber < lastColumn; colNumber++) {
                 headers.add(firstRowHead ? formatter.formatCellValue(row1.getCell(colNumber)):
-                        CellReference.convertNumToColString(row1.getCell(colNumber).getColumnIndex()));
+                        /*org.apache.poi.ss.util.*/CellReference.convertNumToColString(row1.getCell(colNumber).getColumnIndex()));
             }
 
             writer.writeStartDocument();
@@ -481,7 +481,7 @@ public class ExcelUtils {
                     if (col > firstColumn - 1) {
                         try {
                             Cell cell = row.getCell(col);
-                            String val = xmlEncode(formatter.formatCellValue(cell));
+                            String val = formatter.formatCellValue(cell);
                             String[][] diff = pathDiff(lastElement[0], k[1]);
                             closeWriterElements(writer, diff[0].length - (lastElement[0].contains("@") ? 1 :0));
                             for (int e = 0; e < diff[1].length; e++) {
